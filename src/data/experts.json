@@ -1,18 +1,26 @@
 [
   {
-    "person_id": 1,
-    "website_title": "Jane Doe",
-    "summaries_anonymous": "Expert in AI and ML.",
-    "tags_sectors": "Technology, Education",
-    "contact_email": "jane.doe@example.com",
-    "linkedin_url": "https://linkedin.com/in/janedoe"
+    "id": 1,
+    "name": "Alice Smith",
+    "expertise": "AI & Machine Learning",
+    "country": "US",
+    "company": "TechStars",
+    "email": "alice.smith@techstars.com"
   },
   {
-    "person_id": 2,
-    "website_title": "John Smith",
-    "summaries_anonymous": "Healthcare specialist.",
-    "tags_sectors": "Healthcare, Research",
-    "contact_email": "john.smith@example.com",
-    "linkedin_url": "https://linkedin.com/in/johnsmith"
+    "id": 2,
+    "name": "Bob Lee",
+    "expertise": "Cloud Computing",
+    "country": "UK",
+    "company": "Cloudy",
+    "email": "bob.lee@cloudy.co.uk"
+  },
+  {
+    "id": 3,
+    "name": "Carla Gomez",
+    "expertise": "Cybersecurity",
+    "country": "ES",
+    "company": "SecureNow",
+    "email": "carla.gomez@securenow.es"
   }
 ]
