@@ -1,48 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import ExpertRow from "./ExpertRow";
 
-// Loads columns from display_columns.json
-const fetchDisplayColumns = async (): Promise<string[]> => {
-  const response = await fetch("/display_columns.json");
-  return response.json();
+type Expert = {
+  id: number;
+  name: string;
+  expertise: string;
+  country: string;
+  company: string;
+  email: string;
 };
 
-interface ExpertRecord {
-  [key: string]: any;
-}
-
-interface Props {
-  experts: ExpertRecord[];
-}
-
-const ExpertTable: React.FC<Props> = ({ experts }) => {
-  const [displayColumns, setDisplayColumns] = useState<string[]>([]);
-
-  useEffect(() => {
-    fetchDisplayColumns().then(setDisplayColumns);
-  }, []);
-
-  if (displayColumns.length === 0) return <div>Loading columns...</div>;
-
-  return (
-    <table>
-      <thead>
-        <tr>
-          {displayColumns.map((col) => (
-            <th key={col}>{col}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {experts.map((expert, idx) => (
-          <tr key={expert.person_id || idx}>
-            {displayColumns.map((col) => (
-              <td key={col}>{expert[col]}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};
+const ExpertTable: React.FC<{ experts: Expert[] }> = ({ experts }) => (
+  <table style={{ width: "100%", borderCollapse: "collapse", background: "#fff" }}>
+    <thead>
+      <tr>
+        <th style={{ borderBottom: "1px solid #ccc", padding: "0.5rem" }}>Name</th>
+        <th style={{ borderBottom: "1px solid #ccc", padding: "0.5rem" }}>Expertise</th>
+        <th style={{ borderBottom: "1px solid #ccc", padding: "0.5rem" }}>Country</th>
+        <th style={{ borderBottom: "1px solid #ccc", padding: "0.5rem" }}>Company</th>
+        <th style={{ borderBottom: "1px solid #ccc", padding: "0.5rem" }}>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {experts.map((exp) => (
+        <ExpertRow key={exp.id} expert={exp} />
+      ))}
+    </tbody>
+  </table>
+);
 
 export default ExpertTable;
