@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from "react";
-import ExpertTable from "./components/ExpertTable";
+import React from "react";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
+import ContactForm from "./components/ContactForm";
 
-const fetchExperts = async (): Promise<any[]> => {
-  const response = await fetch("/src/data/experts.json");
-  return response.json();
-};
-
-const App: React.FC = () => {
-  const [experts, setExperts] = useState<any[]>([]);
-
-  useEffect(() => {
-    fetchExperts().then(setExperts);
-  }, []);
+function App() {
+  const handleSearch = (query: string) => {
+    // Implement your search logic here
+    console.log("Searching for:", query);
+  };
 
   return (
-    <div style={{ maxWidth: 900, margin: "2rem auto", fontFamily: "Arial, sans-serif" }}>
-      <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>Experts Database</h1>
-      <ExpertTable experts={experts} />
+    <div>
+      <Header />
+      <SearchBar onSearch={handleSearch} />
+      {/* Render talent pool results here */}
+      <ContactForm />
     </div>
   );
-};
+}
 
 export default App;
