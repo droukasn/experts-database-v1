@@ -1,49 +1,62 @@
-# Experts Database
+# Selecta Talent Pool
 
-A simple React app for displaying a table of experts with their name, expertise, country, company, and email.
+Welcome to the **Selecta Talent Pool** project! This repository powers a web application for discovering, searching, and contacting top talent in your organization.
 
 ## Features
 
-- Displays expert data in a responsive table
-- Email addresses are clickable (`mailto:` links)
-- Expert data stored in a local JSON file for easy editing
+- **Branded Header** — Selecta logo and title.
+- **Search Bar** — Quickly filter experts by skill, name, or location.
+- **Contact Form** — Easy outreach to candidates or experts.
+- **Responsive Design** — Modern look and feel for desktop and mobile.
+- **Modular Components** — Clean separation for easy maintenance.
 
-## File Structure
+## Folder Structure
 
 ```
 src/
-  App.tsx
   components/
-    ExpertTable.tsx
-    ExpertRow.tsx
-  data/
-    experts.json
+    Header.tsx
+    SearchBar.tsx
+    ContactForm.tsx
+  styles/
+    Header.module.css
+    SearchBar.module.css
+    ContactForm.module.css
+public/
+  selecta-logo.png
 ```
 
-## Getting Started
+## Quick Start
 
-1. **Install dependencies**  
+1. **Install dependencies**
+   ```bash
    npm install
+   # or
+   yarn install
+   ```
 
-2. **Run the app**  
+2. **Run the app**
+   ```bash
    npm start
+   # or
+   yarn start
+   ```
 
-3. **Edit expert data**  
-   - Update `src/data/experts.json` with your own entries.
+3. **Visit**
+   Open your browser to [http://localhost:3000](http://localhost:3000)
 
-## Testing
+## Usage
 
-Basic tests are included for UI rendering.  
-Run tests with:
-```
-npm test
-```
+- Update `public/selecta-logo.png` with your company's logo.
+- Edit or extend components in `src/components/` as needed.
+- Style your app using CSS modules in `src/styles/`.
+- For custom features, add new components to `src/components/`.
 
-## Customization
+## Contributing
 
-- Add new expert fields to `experts.json` and update components as needed.
-- Style the table further via CSS or inline styles.
+PRs and suggestions are welcome!  
+Please open an issue if you find a bug or want to request a new feature.
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
