@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from '../styles/Logo.module.css';
-<img src="/logo.png" alt="Selecta logo" className={styles.logo} />
-  
+
 export default function Home() {
   return (
     <div style={{ padding: '32px', background: '#f7fafc', minHeight: '100vh' }}>
@@ -11,7 +10,13 @@ export default function Home() {
           alt="Selecta logo"
           className={styles.logo}
         />
-        <h1 style={{ marginLeft: '16px', fontWeight: 700, fontSize: '2.5rem', color: '#1a202c' }}>
+        <h1 style={{
+          marginLeft: '16px',
+          fontWeight: 700,
+          fontSize: '2.5rem',
+          color: '#1a202c',
+          letterSpacing: '1px'
+        }}>
           Selecta Talent Pool
         </h1>
       </header>
@@ -19,60 +24,78 @@ export default function Home() {
         <input
           type="text"
           placeholder="Search experts by skill, name, or location"
-          style={{ padding: '8px', width: '300px', borderRadius: '4px', border: '1px solid #ccc' }}
+          style={{
+            padding: '10px 12px',
+            width: '320px',
+            borderRadius: '4px',
+            border: '1px solid #ccc',
+            fontSize: '1rem',
+            boxSizing: 'border-box'
+          }}
         />
         <button style={{
           marginLeft: '12px',
-          padding: '8px 20px',
+          padding: '10px 24px',
           background: '#ffd700',
           border: 'none',
           borderRadius: '4px',
           fontWeight: 700,
-          cursor: 'pointer'
+          cursor: 'pointer',
+          fontSize: '1rem',
+          color: '#222'
         }}>Search</button>
       </div>
-      <table style={{ borderCollapse: 'collapse', width: '100%', background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+      <table style={{
+        borderCollapse: 'collapse',
+        width: '100%',
+        background: '#fff',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.03)'
+      }}>
         <thead>
-          <tr>
-            <th style={{ padding: '12px', border: '1px solid #eee' }}>Name</th>
-            <th style={{ padding: '12px', border: '1px solid #eee' }}>Expertise</th>
-            <th style={{ padding: '12px', border: '1px solid #eee' }}>Country</th>
-            <th style={{ padding: '12px', border: '1px solid #eee' }}>Company</th>
-            <th style={{ padding: '12px', border: '1px solid #eee' }}>Email</th>
+          <tr style={{ background: '#f5f5f5' }}>
+            <th style={{ padding: '14px', border: '1px solid #f0f0f0', fontWeight: 600, fontSize: '1.1rem' }}>Name</th>
+            <th style={{ padding: '14px', border: '1px solid #f0f0f0', fontWeight: 600, fontSize: '1.1rem' }}>Expertise</th>
+            <th style={{ padding: '14px', border: '1px solid #f0f0f0', fontWeight: 600, fontSize: '1.1rem' }}>Country</th>
+            <th style={{ padding: '14px', border: '1px solid #f0f0f0', fontWeight: 600, fontSize: '1.1rem' }}>Company</th>
+            <th style={{ padding: '14px', border: '1px solid #f0f0f0', fontWeight: 600, fontSize: '1.1rem' }}>Email</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Maria Rossi</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Data Science, AI</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Italy</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Cross Border Talents</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Maria Rossi</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Data Science, AI</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Italy</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Cross Border Talents</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>
               <a href="mailto:maria.rossi@example.com">maria.rossi@example.com</a>
             </td>
           </tr>
           <tr>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>John Smith</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Frontend Developer</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>UK</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>TalentPilot</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>John Smith</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Frontend Developer</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>UK</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Selecta</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>
               <a href="mailto:john.smith@example.com">john.smith@example.com</a>
             </td>
           </tr>
           <tr>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Liu Wei</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Cloud Architect</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>China</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>Cross Border Talents</td>
-            <td style={{ padding: '12px', border: '1px solid #eee' }}>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Liu Wei</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Cloud Architect</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>China</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>Cross Border Talents</td>
+            <td style={{ padding: '12px', border: '1px solid #f0f0f0' }}>
               <a href="mailto:liu.wei@example.com">liu.wei@example.com</a>
             </td>
           </tr>
         </tbody>
       </table>
-      <footer style={{ marginTop: '40px', color: '#888' }}>
-        © 2025 Selecta
+      <footer style={{
+        marginTop: '40px',
+        color: '#888',
+        fontSize: '1.05rem'
+      }}>
+        © 2025 Selecta Talent Pool
       </footer>
     </div>
   );
