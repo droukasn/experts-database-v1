@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from '../styles/Logo.module.css';
-
+<img src="/logo.png" alt="Selecta logo" className={styles.logo} />
+  
 export default function Home() {
   return (
     <div style={{ padding: '32px', background: '#f7fafc', minHeight: '100vh' }}>
